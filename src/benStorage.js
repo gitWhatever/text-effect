@@ -1,0 +1,1 @@
+window.arrayEach = Array.prototype.forEach;

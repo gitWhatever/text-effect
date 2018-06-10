@@ -1,0 +1,36 @@
+{
+  "name": "textillate-vanilla",
+  "version": "1.0.0",
+  "description": "textillate with pure javascript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:cjs": "NODE_ENV=cjs rollup -c -o lib/index.js",
+    "build:dev": "NODE_ENV=dev rollup -c",
+    "build:pro": "NODE_ENV=pro rollup -c",
+    "dev": "NODE_ENV=umd rollup -c -w"
+  },
+  "keywords": [
+    "textillate",
+    "effect",
+    "animation"
+  ],
+  "author": "huoyu.rhy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-runtime": "^6.26.0",
+    "rollup": "^0.59.4",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^4.0.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "deepmerge": "^2.1.1"
+  }
+}

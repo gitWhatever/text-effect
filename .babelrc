@@ -1,0 +1,23 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": [
+                        "ie >= 8"
+                    ]
+                },
+                "exclude": [
+                    "transform-async-to-generator",
+                    "transform-regenerator"
+                ],
+                "modules": false,
+                "loose": true
+            }
+        ]
+    ],
+    "plugins": [
+        "transform-object-rest-spread","external-helpers"
+    ]
+}
