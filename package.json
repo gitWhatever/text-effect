@@ -1,5 +1,5 @@
 {
-  "name": "textillate-vanilla",
+  "name": "text-effect",
   "version": "1.0.0",
   "description": "textillate with pure javascript",
   "main": "lib/index.js",
@@ -12,6 +12,8 @@
   },
   "keywords": [
     "textillate",
+    "lettring",
+    "vanilla",
     "effect",
     "animation"
   ],
@@ -22,6 +24,7 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-runtime": "^6.26.0",
     "rollup": "^0.59.4",
@@ -30,7 +33,6 @@
     "rollup-plugin-uglify": "^4.0.0"
   },
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "deepmerge": "^2.1.1"
   }
 }
