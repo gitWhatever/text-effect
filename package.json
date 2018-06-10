@@ -2,7 +2,7 @@
   "name": "textillate-vanilla",
   "version": "1.0.0",
   "description": "textillate with pure javascript",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:cjs": "NODE_ENV=cjs rollup -c -o lib/index.js",

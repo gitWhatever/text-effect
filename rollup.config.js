@@ -14,7 +14,13 @@ const config = {
         exclude: 'node_modules/**' // 只编译我们的源代码
     },
 }
-
+if (env === 'cjs') {
+    config.output = {
+        file: 'lib/index.js',
+        format: env,
+        indent: false
+    }
+}
 if (env === 'dev' || env === 'pro') {
     config.output = {
         file: 'dist/index.js',
