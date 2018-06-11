@@ -9,7 +9,10 @@
 </head>
 <body>
     <h1 class="tlt">
-        121212
+        <ul class='texts'>
+            <li data-in-effect='lightSpeedIn' data-out-effect='fadeOutDown'>1212</li>
+            <li data-in-effect='flipInX'>3333</li>
+        </ul>
     </h1>
     <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
     <script>
@@ -78,7 +81,12 @@
     <script src='../dist/index.js'></script>
     <script>
         // $('.tlt').textillate();
-        new TextEffect(document.querySelector('.tlt')).textillate();
+        new TextEffect(document.querySelector('.tlt')).textillate({
+            in: {
+                effect: 'flipInX'
+            },
+            loop:true
+        });
     </script>
 </body>
 </html>

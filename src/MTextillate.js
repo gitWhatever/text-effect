@@ -1,7 +1,7 @@
 import merge from 'deepmerge'
 import jDom from './dom';
 import lettering from './lettering';
-import './benStorage';
+import { arrayEach } from './benStorage';
 
 export default class MTextillate{
     constructor(element, options) {
@@ -51,7 +51,6 @@ export default class MTextillate{
             !function run(index) {
                 self.in(index, function () {
                     index++;
-    
                     if (!options.loop && index >= length) { 
                         if (options.callback) options.callback();
                         self.triggerEvent('end');
@@ -82,7 +81,7 @@ export default class MTextillate{
         const children = jDom.elementChildren(self.textEle);
         const nextReferEle = children[index];
         const { currentEle, baseEle, options } = self;
-        const thisOptions = merge({}, options, jDom.getDataOpt(nextReferEle));
+        const thisOptions = merge.all([options, jDom.getDataOpt(nextReferEle)]);
         const isInEffectV = isInEffect(thisOptions.in.effect);
         const isOutEffectV = isOutEffect(thisOptions.out.effect);
         
@@ -135,7 +134,7 @@ export default class MTextillate{
         const tokenEles = jDom.elementChildren(currentEle);
         const childrenOfTextEle = jDom.elementChildren(self.textEle);
         const nextReferEle = childrenOfTextEle[self.currentIndex];
-        const thisOptions = jDom.dataApi.set(nextReferEle, 'bindOptions');
+        const thisOptions = jDom.dataApi.get(nextReferEle, 'bindOptions');
         const isOutEffectV = isOutEffect(thisOptions.out.effect);
         self.triggerEvent('outAnimationBegin');
         
@@ -243,7 +242,6 @@ function shuffle(o) {
 
 function reverse(tokenEles) {
     const len = tokenEles.length;
-    debugger;
     for (let i = len - 1; i >= (~~(len / 2)); i--) {
         let temp = null;
         temp = tokenEles[i];

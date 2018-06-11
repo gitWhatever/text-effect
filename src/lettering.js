@@ -1,5 +1,5 @@
 import jDom from './dom';
-import './benStorage';
+import { arrayEach } from './benStorage';
 
 export default function lettering(outerEles, method, ...rest) {
     console.log(outerEles);

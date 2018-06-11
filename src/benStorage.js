@@ -1,1 +1,1 @@
-window.arrayEach = Array.prototype.forEach;
+export const arrayEach = Array.prototype.forEach;

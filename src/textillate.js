@@ -1,7 +1,7 @@
 import merge from 'deepmerge'
 import jDom from './dom';
 import MTextillate from './MTextillate'
-import './benStorage';
+import { arrayEach } from './benStorage';
 
 
 export default {
@@ -11,7 +11,7 @@ export default {
         const involkeWhiteList = ['start', 'stop', 'setOptions', 'init'];
         
         arrayEach.call(outerEles, (el, index) => {
-            const options = merge({}, MTextillate.defaultConfig, getDataOpt(el), typeof settings === 'object' && settings);
+            const options = merge.all([MTextillate.defaultConfig, jDom.getDataOpt(el), typeof settings === 'object' && settings]);
             let mInstance = dataApi.get(el, 'mTextillate');
             if (!mInstance){
                 dataApi.get(el, 'mTextillate', (mInstance = new MTextillate(el, options)));
