@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>lettering</title>
 </head>
 <body>
-    <h1 class="tlt">
-        <ul class="texts">
-            <li data-out-effect="fadeOut" data-out-shuffle="true">Some Title</li>
-            <li data-in-effect="fadeIn">Another Title</li>
-        </ul>
-    </h1>
+    <h1 class="tlt"> this is lettering sample </h1>
+    <h1 class="tlt2"> this is second lettering sample </h1>
     <script src='../dist/index.js'></script>
     <script>
-        var textEffect = new textEffect(document.querySelector('.tlt'))
-        // textEffect.lettering();
+        TextEffect.lettering('.tlt', 'word');
 
-        // $('.tlt').textillate();
+        TextEffect.lettering('.tlt2');
     </script>
 </body>
 </html>

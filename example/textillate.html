@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>textillate</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
+</head>
+<body>
+    <h1 class="tlt">
+        <ul class='texts'>
+            <li data-in-effect='lightSpeedIn' data-out-effect='fadeOutDown'>welcome to use text-effect</li>
+            <li data-in-effect='flipInX'>this is textillate sample</li>
+        </ul>
+    </h1>
+    <button id='bt'>点我暂定</button>
+    <button id='bt2'>点我重新开始</button>
+    <script src='../dist/index.js'></script>
+    <script>
+        var te = new TextEffect('.tlt').textillate({
+            in: {
+                effect: 'flipInX'
+            },
+            loop:true
+        });
+        document.querySelector('#bt').addEventListener('click', function() {
+            te.textillate('stop');
+        })
+        document.querySelector('#bt2').addEventListener('click', function () {
+            te.textillate('start');
+        })
+
+        te.on('effectStart', function() {
+            console.log('效果开始了');
+        })
+        te.on('effectFinish', function () {
+            console.log('效果结束了');
+        })
+        te.on('inAnimationBegin', function () {
+            console.log('进入动画开始');
+        })
+        te.on('inAnimationEnd', function () {
+            console.log('进入动画结束');
+        })
+        te.on('outAnimationBegin', function () {
+            console.log('移出动画开始');
+        })
+        te.on('outAnimationEnd', function () {
+            console.log('移出动画结束');
+        })
+    </script>
+</body>
+</html>
