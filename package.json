@@ -1,16 +1,16 @@
 {
   "name": "text-effect",
-  "version": "1.0.0",
-  "description": "textillate with pure javascript",
+  "version": "1.0.1",
+  "description": "textillate with vanilla javascript",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:cjs": "NODE_ENV=cjs rollup -c -o lib/index.js",
+    "compile:npm": "NODE_ENV=cjs rollup -c -o lib/index.js",
     "build:dev": "NODE_ENV=dev rollup -c",
     "build:pro": "NODE_ENV=pro rollup -c",
     "dev": "NODE_ENV=dev rollup -c -w",
     "fix": "eslint --fix ./src/*.js",
-    "lint": "eslint ./src/*.js"
+    "lint": "eslint ./src/*.js",
+    "prepublish": "npm run compile:npm"
   },
   "keywords": [
     "textillate",
@@ -21,6 +21,10 @@
   ],
   "author": "huoyu.rhy",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitWhatever/text-effect.git"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",

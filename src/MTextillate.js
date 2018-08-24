@@ -38,11 +38,12 @@ function reverse(tokenEles) {
     tokenEles[i] = tokenEles[len - 1 - i];
     tokenEles[len - 1 - i] = temp;
   }
+  return tokenEles;
 }
 
 function animateTokens(tokenEles, options, cb) {
   let count = tokenEles.length;
-
+  
   if (count < 1) {
     // 保持cb的回调一定是异步的
     setTimeout(() => {
@@ -51,6 +52,7 @@ function animateTokens(tokenEles, options, cb) {
     return;
   }
 
+  tokenEles = [].slice.call(tokenEles);
   if (options.shuffle) tokenEles = shuffle(tokenEles);
   if (options.reverse) tokenEles = reverse(tokenEles);
 

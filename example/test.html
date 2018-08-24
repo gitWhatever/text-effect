@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>textillate</title>
+    <script defer src='./test.js'></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css">
 </head>
 <body>
     <h1 class="tlt">
         <ul class='texts'>
-            <li data-in-effect='lightSpeedIn' data-out-effect='fadeOutDown'>1212</li>
-            <li data-in-effect='flipInX'>3333</li>
+            <li data-in-effect='lightSpeedIn' data-out-effect='fadeOutDown'>welcome to use text-effect</li>
+            <li data-in-effect='flipInX'>this is textillate sample</li>
         </ul>
     </h1>
+    <button id='bt'>点我切换暂定与重开</button>
     <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
     <script>
         (function ($) {
@@ -81,12 +83,17 @@
     <script src='../dist/index.js'></script>
     <script>
         // $('.tlt').textillate();
-        new TextEffect(document.querySelector('.tlt')).textillate({
+
+        var te = new TextEffect('.tlt').textillate({
             in: {
                 effect: 'flipInX'
             },
             loop:true
         });
+        document.querySelector('#bt').addEventListener('click', function() {
+            te.textillate('stop');
+        })
+        console.log('zzzzz');
     </script>
 </body>
 </html>

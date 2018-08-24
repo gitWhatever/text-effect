@@ -1,7 +1,7 @@
 # text-effect
-```
-textillate纯js实现版本，包括lettering(文字分离)和textillate(文字动画)的功能。
-```
+`
+textillate纯js实现版本，提供了lettering(文字分离)和textillate(文字动画)两种功能。
+`
 
 实际效果可参考textillate的[官网](http://textillate.js.org/)
 
@@ -131,4 +131,5 @@ var te = new TextEffect('.tlt').textillate();
 * `te.textillate('init')`
 
 ## Example
+
 实际的调用方式可以参考目录example/

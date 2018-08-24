@@ -20,7 +20,11 @@
     <script>
         var te = new TextEffect('.tlt').textillate({
             in: {
-                effect: 'flipInX'
+                effect: 'flipInX',
+                shuffle: true,
+            },
+            out: {
+                reverse: true,
             },
             loop:true
         });
