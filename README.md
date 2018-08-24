@@ -8,6 +8,18 @@ textillate纯js实现版本，提供了lettering(文字分离)和textillate(文�
 ## 兼容性
 IE8+
 
+## Installation
+In a browser:
+you can get static source from the dist directory
+```
+<script src="text-effect.js"></script>
+```
+
+Using npm:
+```
+$ npm i --save text-effect
+```
+
 ## Usage
 basic markup:
 
@@ -16,6 +28,8 @@ basic markup:
 ```
 
 ```js
+import TextEffect from 'text-effect';
+
 new TextEffect('.tlt').textillate();
 or
 new TextEffect(document.querySelector('.tlt')).textillate();
@@ -24,6 +38,8 @@ new TextEffect(document.querySelector('.tlt')).textillate();
 if you just want to use lettring function,proveide a static function for you to use
 
 ```js
+import TextEffect from 'text-effect';
+
 TextEffect.lettring('.tlt');
 ```
 
